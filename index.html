@@ -1,0 +1,22 @@
+<!-- Code to add note to order using Miva -->
+<mvt:if expr="g.customerAction EQ 'addnotes' AND g.notes">
+    <mvt:item name="customfields" param="Write_Basket( 'order_notes', g.notes)" />  
+</mvt:if>
+
+<!-- Explanation of code and variables -->
+g.customerAction = Used to check action sent by user 
+g.notes = Used to get data from the user which they have added in the notes example "Hello"
+name="customfields" param="Write_Basket( 'order_notes', g.notes)" function to Write_Basket at one the time of purchanse
+
+<html>
+    <body>
+        <head>
+            <title>Order Notes</title>
+        </head>
+        <h5>Add Notes</h5>
+        <textarea name="notes" value="">Hello</textarea>
+    </body>
+</html>
+
+<!-- HTML Code is visual representation to add notes -->
+<!-- Name will act as g.notes -->
